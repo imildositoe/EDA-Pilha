@@ -7,7 +7,7 @@ import java.util.Vector;
  */
 public class TestePilhaVector {
     public static void main(String[] args) {
-        PilhaVector pilha = new PilhaVector<>();
+        PilhaVector<String> pilha = new PilhaVector<>();
 
         pilha.inserir("Imildo");
         pilha.inserir("Poison");

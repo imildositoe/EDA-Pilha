@@ -16,21 +16,23 @@ public class PilhaVector<E> implements InterfacePilha {
         return true;
     }
 
+
+
     @Override
-    public Object removerTopo(){
+    public E removerTopo(){
         if(estaVazio()) {
             throw new NullPointerException("Posicao inexistente");
         }else{
-            return vector.remove(vector.size() - 1);
+            return (E) vector.remove(vector.size() - 1);
         }
     }
 
     @Override
-    public Object verificarTopo() {
+    public E verificarTopo() {
         if(estaVazio()) {
             throw new NullPointerException("Posicao inexistente");
         }else{
-            return vector.elementAt(vector.size() - 1);
+            return (E)vector.elementAt(vector.size() - 1);
         }
     }
 

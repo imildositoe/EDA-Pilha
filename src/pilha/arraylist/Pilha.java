@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Imildo Sitoe on 08-Sep-17.
  */
-public class Pilha<T> implements InterfacePilha {
+public class Pilha<E> implements InterfacePilha {
     ArrayList arrayList = new ArrayList(10);
 
     @Override
@@ -15,9 +15,9 @@ public class Pilha<T> implements InterfacePilha {
     }
 
     @Override
-    public Object removerTopo() throws NullPointerException {
+    public E removerTopo() throws NullPointerException {
         if (!estaVazio()) {
-            Object obj = arrayList.get(arrayList.size() - 1);
+            E obj = (E)arrayList.get(arrayList.size() - 1);
             arrayList.remove(arrayList.size() - 1);
             return obj;
         } else {
@@ -26,11 +26,11 @@ public class Pilha<T> implements InterfacePilha {
     }
 
     @Override
-    public Object verificarTopo() throws NullPointerException {
+    public E verificarTopo() throws NullPointerException {
         if (estaVazio()) {
             throw new NullPointerException("Posicao inexistente");
         } else {
-            return arrayList.get(arrayList.size() - 1);
+            return (E)arrayList.get(arrayList.size() - 1);
         }
     }
 

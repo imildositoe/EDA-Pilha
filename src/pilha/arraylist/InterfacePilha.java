@@ -3,13 +3,13 @@ package pilha.arraylist;
 /**
  * Created by Imildo Sitoe on 07-Sep-17.
  */
-public interface InterfacePilha {
+public interface InterfacePilha<E> {
 
-    public boolean inserir(Object object);
-    public Object removerTopo();
-    public Object verificarTopo();
+    public boolean inserir(E object);
+    public E removerTopo();
+    public E verificarTopo();
     public boolean estaVazio();
-    public int pesquisar(Object object);
+    public int pesquisar(E object);
     public int tamanho();
 
 
